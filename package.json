@@ -1,0 +1,30 @@
+{
+  "name": "oh-pmr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RkayG/oh-pmr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RkayG/oh-pmr/issues"
+  },
+  "homepage": "https://github.com/RkayG/oh-pmr#readme",
+  "description": "Cloud-based PMR (Patient Medication Record) system for UK pharmacies",
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.0.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}
