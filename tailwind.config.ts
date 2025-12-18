@@ -15,6 +15,7 @@ const config: Config = {
         "background-dark": "#111921",
         "surface-light": "#ffffff",
         "surface-dark": "#1e2936",
+        "slate-850": "#1a2430",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

@@ -8,7 +8,7 @@
 :root {
   --background: #f6f7f8;
   --foreground: #111921;
-  --primary: #197fe6;
+  --primary: #191970;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,4 +45,12 @@ body {
 
 .dark ::-webkit-scrollbar-thumb {
   background: #334155;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.icon-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
