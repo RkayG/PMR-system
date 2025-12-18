@@ -1,3 +1,7 @@
+'use client';
+
+import Link from 'next/link';
+
 interface BreadcrumbItem {
   label: string;
   href: string | null;
@@ -16,12 +20,12 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
             <span className="text-slate-400 dark:text-slate-600 mx-2">/</span>
           )}
           {item.href ? (
-            <a
+            <Link
               className="text-slate-500 dark:text-slate-400 font-medium hover:text-primary transition-colors"
               href={item.href}
             >
               {item.label}
-            </a>
+            </Link>
           ) : (
             <span className="text-slate-900 dark:text-white font-medium">{item.label}</span>
           )}
