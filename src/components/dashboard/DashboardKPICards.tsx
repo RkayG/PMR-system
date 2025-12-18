@@ -1,5 +1,7 @@
 'use client';
 
+import { TrendingUp, CreditCard, Pill, UserPlus, Package, AlertTriangle } from 'lucide-react';
+
 export default function DashboardKPICards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
@@ -11,12 +13,12 @@ export default function DashboardKPICards() {
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-1">£12,450</h3>
           </div>
           <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
-            <span className="material-symbols-outlined text-[14px]">trending_up</span>
+            <TrendingUp className="size-3.5" />
             +4.5%
           </span>
         </div>
         <div className="absolute -right-4 -bottom-4 text-slate-100 dark:text-slate-800/50 transform group-hover:scale-110 transition-transform duration-300">
-          <span className="material-symbols-outlined text-[100px] opacity-50">payments</span>
+          <CreditCard className="size-[100px] opacity-50" />
         </div>
       </div>
 
@@ -28,12 +30,12 @@ export default function DashboardKPICards() {
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-1">3,420</h3>
           </div>
           <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold">
-            <span className="material-symbols-outlined text-[14px]">trending_up</span>
+            <TrendingUp className="size-3.5" />
             +1.2%
           </span>
         </div>
         <div className="absolute -right-4 -bottom-4 text-slate-100 dark:text-slate-800/50 transform group-hover:scale-110 transition-transform duration-300">
-          <span className="material-symbols-outlined text-[100px] opacity-50">medication</span>
+          <Pill className="size-[100px] opacity-50" />
         </div>
       </div>
 
@@ -45,12 +47,12 @@ export default function DashboardKPICards() {
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-1">850</h3>
           </div>
           <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold">
-            <span className="material-symbols-outlined text-[14px]">trending_up</span>
+            <TrendingUp className="size-3.5" />
             +0.8%
           </span>
         </div>
         <div className="absolute -right-4 -bottom-4 text-slate-100 dark:text-slate-800/50 transform group-hover:scale-110 transition-transform duration-300">
-          <span className="material-symbols-outlined text-[100px] opacity-50">person_add</span>
+          <UserPlus className="size-[100px] opacity-50" />
         </div>
       </div>
 
@@ -64,12 +66,12 @@ export default function DashboardKPICards() {
             </h3>
           </div>
           <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-semibold">
-            <span className="material-symbols-outlined text-[14px]">warning</span>
+            <AlertTriangle className="size-3.5" />
             Action Needed
           </span>
         </div>
         <div className="absolute -right-4 -bottom-4 text-red-50 dark:text-red-900/10 transform group-hover:scale-110 transition-transform duration-300">
-          <span className="material-symbols-outlined text-[100px] opacity-50">inventory_2</span>
+          <Package className="size-[100px] opacity-50" />
         </div>
       </div>
     </div>

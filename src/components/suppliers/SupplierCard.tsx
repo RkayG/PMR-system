@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { Phone, Eye, MoreVertical } from 'lucide-react';
 import type { Supplier } from './SupplierTable';
 
 interface SupplierCardProps {
@@ -96,14 +97,14 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
           href={`tel:${supplier.phone.replace(/\s/g, '')}`}
           className="flex-1 py-2 px-3 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-500 hover:text-primary hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors flex items-center justify-center gap-2"
         >
-          <span className="material-symbols-outlined text-[18px]">call</span>
+          <Phone className="size-4.5" />
           Call
         </a>
         <Link
           href={`/suppliers/${supplier.id}`}
           className="flex-1 py-2 px-3 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-500 hover:text-primary hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors flex items-center justify-center gap-2"
         >
-          <span className="material-symbols-outlined text-[18px]">visibility</span>
+          <Eye className="size-4.5" />
           Details
         </Link>
       </div>

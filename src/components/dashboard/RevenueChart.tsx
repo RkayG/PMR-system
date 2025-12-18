@@ -1,5 +1,7 @@
 'use client';
 
+import { ArrowRight } from 'lucide-react';
+
 export default function RevenueChart() {
   return (
     <div className="xl:col-span-2 bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
@@ -9,7 +11,7 @@ export default function RevenueChart() {
           <p className="text-sm text-slate-500 dark:text-slate-400">Revenue & Prescriptions Dispensed over time</p>
         </div>
         <button className="text-primary hover:text-blue-600 text-sm font-medium flex items-center gap-1">
-          Full Report <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+          Full Report <ArrowRight className="size-4" />
         </button>
       </div>
       {/* Chart Container */}

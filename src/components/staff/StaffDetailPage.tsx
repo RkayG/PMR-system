@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Save } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import StaffProfileCard from './detail/StaffProfileCard';
@@ -85,7 +86,7 @@ export default function StaffDetailPage({ staffId }: StaffDetailPageProps) {
                 onClick={handleSave}
                 className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-blue-600 shadow-sm shadow-blue-200 dark:shadow-none transition-colors flex items-center gap-2"
               >
-                <span className="material-symbols-outlined text-[18px]">save</span>
+                <Save className="size-4.5" />
                 Save Changes
               </button>
             </div>

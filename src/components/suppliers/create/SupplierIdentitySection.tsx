@@ -1,5 +1,7 @@
 'use client';
 
+import { Badge } from 'lucide-react';
+
 interface SupplierIdentitySectionProps {
   supplierName: string;
   accountReference: string;
@@ -14,7 +16,7 @@ export default function SupplierIdentitySection({
   return (
     <div className="p-6 md:p-8 border-b border-slate-100 dark:border-slate-700/50">
       <h3 className="flex items-center gap-2 text-slate-900 dark:text-white text-lg font-bold leading-tight mb-6">
-        <span className="material-symbols-outlined text-primary">badge</span>
+        <Badge className="text-primary size-5" />
         Supplier Identity
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

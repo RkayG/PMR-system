@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export interface StaffMember {
   id: string;
@@ -219,7 +220,7 @@ export default function StaffTable() {
                     className="text-slate-400 hover:text-primary transition-colors inline-block"
                     title="View Details"
                   >
-                    <span className="material-symbols-outlined">visibility</span>
+                    <Eye className="size-5" />
                   </Link>
                 </td>
               </tr>
@@ -244,7 +245,7 @@ export default function StaffTable() {
                 href="#"
               >
                 <span className="sr-only">Previous</span>
-                <span className="material-symbols-outlined text-[20px]">chevron_left</span>
+                <ChevronLeft className="size-5" />
               </a>
               <a
                 aria-current="page"
@@ -270,7 +271,7 @@ export default function StaffTable() {
                 href="#"
               >
                 <span className="sr-only">Next</span>
-                <span className="material-symbols-outlined text-[20px]">chevron_right</span>
+                <ChevronRight className="size-5" />
               </a>
             </nav>
           </div>

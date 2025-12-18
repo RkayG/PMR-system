@@ -1,5 +1,7 @@
 'use client';
 
+import { Edit, Stethoscope } from 'lucide-react';
+
 interface StaffProfileCardProps {
   firstName: string;
   lastName: string;
@@ -40,14 +42,14 @@ export default function StaffProfileCard({
           style={{ backgroundImage: `url("${photo}")` }}
         />
         <button className="absolute bottom-0 right-0 p-2 bg-primary text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors">
-          <span className="material-symbols-outlined block text-[16px]">edit</span>
+          <Edit className="size-4" />
         </button>
       </div>
       <h2 className="text-xl font-bold text-slate-900 dark:text-white">
         {firstName} {lastName}
       </h2>
       <span className="inline-flex items-center gap-1.5 px-3 py-1 mt-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-bold border border-blue-100 dark:border-blue-800">
-        <span className="material-symbols-outlined text-[14px]">medical_services</span>
+        <Stethoscope className="size-3.5" />
         {getRoleLabel(role)}
       </span>
       <div className="w-full mt-6 pt-6 border-t border-slate-100 dark:border-slate-700 flex justify-between text-sm">

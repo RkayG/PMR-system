@@ -1,5 +1,7 @@
 'use client';
 
+import { MapPin, Search } from 'lucide-react';
+
 interface AddressLocationSectionProps {
   postcode: string;
   addressLine1: string;
@@ -25,7 +27,7 @@ export default function AddressLocationSection({
   return (
     <div className="p-6 md:p-8 border-b border-slate-100 dark:border-slate-700/50">
       <h3 className="flex items-center gap-2 text-slate-900 dark:text-white text-lg font-bold leading-tight mb-6">
-        <span className="material-symbols-outlined text-primary">location_on</span>
+        <MapPin className="text-primary size-5" />
         Address & Location
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -45,7 +47,7 @@ export default function AddressLocationSection({
               className="flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium px-4 h-12 hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors"
               onClick={handlePostcodeSearch}
             >
-              <span className="material-symbols-outlined mr-1">search</span>
+              <Search className="mr-1 size-5" />
               Find
             </button>
           </div>

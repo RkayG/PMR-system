@@ -1,12 +1,14 @@
 'use client';
 
+import { Building2 } from 'lucide-react';
+
 export default function FinancialDetailsCard() {
   return (
     <div className="flex flex-col rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-200 dark:border-slate-700">
       <div className="flex items-center justify-between p-5 pb-2">
         <h3 className="font-bold text-slate-900 dark:text-white">Financial Details</h3>
         <div className="rounded-full bg-orange-50 dark:bg-orange-900/20 p-2 text-orange-600 dark:text-orange-400">
-          <span className="material-symbols-outlined text-[20px]">account_balance</span>
+          <Building2 className="size-5" />
         </div>
       </div>
       <div className="grid grid-cols-1 p-5 pt-2">

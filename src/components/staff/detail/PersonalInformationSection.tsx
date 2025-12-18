@@ -1,5 +1,7 @@
 'use client';
 
+import { User, Mail, Phone, Info } from 'lucide-react';
+
 interface PersonalInformationSectionProps {
   firstName: string;
   lastName: string;
@@ -22,7 +24,7 @@ export default function PersonalInformationSection({
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <div className="bg-blue-50 dark:bg-slate-700 p-2 rounded-lg text-primary">
-            <span className="material-symbols-outlined">person</span>
+            <User className="size-5" />
           </div>
           <h3 className="text-lg font-bold text-slate-900 dark:text-white">Personal Information</h3>
         </div>
@@ -56,9 +58,7 @@ export default function PersonalInformationSection({
             Email Address
           </label>
           <div className="relative">
-            <span className="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-[18px]">
-              mail
-            </span>
+            <Mail className="absolute left-3 top-2.5 text-slate-400 size-4.5" />
             <input
               className="w-full pl-10 rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-primary focus:border-primary text-sm font-medium"
               type="email"
@@ -72,9 +72,7 @@ export default function PersonalInformationSection({
             Phone Number
           </label>
           <div className="relative">
-            <span className="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-[18px]">
-              phone
-            </span>
+            <Phone className="absolute left-3 top-2.5 text-slate-400 size-4.5" />
             <input
               className="w-full pl-10 rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-primary focus:border-primary text-sm font-medium"
               type="tel"
@@ -86,12 +84,10 @@ export default function PersonalInformationSection({
         <div className="flex flex-col gap-1.5 sm:col-span-2">
           <label className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase flex items-center gap-1">
             GPhC Registration Number
-            <span
-              className="material-symbols-outlined text-slate-400 text-[14px]"
+            <Info
+              className="text-slate-400 size-3.5"
               title="Required for Pharmacists and Technicians"
-            >
-              info
-            </span>
+            />
           </label>
           <input
             className="w-full rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-primary focus:border-primary text-sm font-medium font-mono tracking-wide"

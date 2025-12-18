@@ -1,5 +1,7 @@
 'use client';
 
+import { MapPin, Search } from 'lucide-react';
+
 interface AddressContactSectionProps {
   postcode: string;
   addressLine1: string;
@@ -54,7 +56,7 @@ export default function AddressContactSection({
               type="button"
               onClick={handlePostcodeSearch}
             >
-              <span className="material-symbols-outlined text-[20px]">search</span>
+              <Search className="size-5" />
               Find
             </button>
           </div>

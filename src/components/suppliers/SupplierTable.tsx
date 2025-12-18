@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { Phone, Mail, Eye, Edit, Trash2 } from 'lucide-react';
 
 export interface Supplier {
   id: string;
@@ -175,16 +176,14 @@ export default function SupplierTable() {
                       className="flex items-center gap-1.5 text-slate-900 dark:text-white hover:text-primary dark:hover:text-primary font-medium group/link"
                       href={`tel:${supplier.phone.replace(/\s/g, '')}`}
                     >
-                      <span className="material-symbols-outlined text-[16px] text-slate-500 group-hover/link:text-primary">
-                        call
-                      </span>
+                      <Phone className="size-4 text-slate-500 group-hover/link:text-primary" />
                       {supplier.phone}
                     </a>
                     <a
                       className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-xs truncate max-w-[160px]"
                       href={`mailto:${supplier.email}`}
                     >
-                      <span className="material-symbols-outlined text-[16px]">mail</span>
+                      <Mail className="size-4" />
                       {supplier.email}
                     </a>
                   </div>
@@ -198,19 +197,19 @@ export default function SupplierTable() {
                       className="p-2 text-slate-500 hover:text-primary hover:bg-blue-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
                       title="View Details"
                     >
-                      <span className="material-symbols-outlined text-[20px]">visibility</span>
+                      <Eye className="size-5" />
                     </Link>
                     <button
                       className="p-2 text-slate-500 hover:text-primary hover:bg-blue-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
                       title="Edit"
                     >
-                      <span className="material-symbols-outlined text-[20px]">edit</span>
+                      <Edit className="size-5" />
                     </button>
                     <button
                       className="p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors"
                       title="Delete"
                     >
-                      <span className="material-symbols-outlined text-[20px]">delete</span>
+                      <Trash2 className="size-5" />
                     </button>
                   </div>
                 </td>

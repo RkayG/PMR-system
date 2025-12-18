@@ -1,5 +1,7 @@
 'use client';
 
+import { CreditCard, ChevronDown } from 'lucide-react';
+
 interface FinancialsSectionProps {
   paymentTerms: string;
   vatNumber: string;
@@ -14,7 +16,7 @@ export default function FinancialsSection({
   return (
     <div className="p-6 md:p-8 border-b border-slate-100 dark:border-slate-700/50">
       <h3 className="flex items-center gap-2 text-slate-900 dark:text-white text-lg font-bold leading-tight mb-6">
-        <span className="material-symbols-outlined text-primary">payments</span>
+        <CreditCard className="text-primary size-5" />
         Financials & Terms
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -37,9 +39,7 @@ export default function FinancialsSection({
               <option value="net60">Net 60 Days</option>
               <option value="cod">Cash On Delivery (COD)</option>
             </select>
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500 material-symbols-outlined">
-              expand_more
-            </span>
+            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500 size-5" />
           </div>
         </label>
         <label className="flex flex-col w-full">

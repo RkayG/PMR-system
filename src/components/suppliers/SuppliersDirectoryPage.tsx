@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Upload, Plus } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import SupplierStatsCards from './SupplierStatsCards';
@@ -42,14 +43,14 @@ export default function SuppliersDirectoryPage() {
             </div>
             <div className="flex gap-3">
               <button className="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-semibold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
-                <span className="material-symbols-outlined text-[20px]">file_upload</span>
+                <Upload className="size-5" />
                 Import
               </button>
               <Link
                 href="/suppliers/new"
                 className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-md shadow-primary/20 hover:bg-blue-600 transition-colors flex items-center gap-2"
               >
-                <span className="material-symbols-outlined text-[20px]">add</span>
+                <Plus className="size-5" />
                 Add New Supplier
               </Link>
             </div>

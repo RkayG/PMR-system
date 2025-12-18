@@ -1,5 +1,7 @@
 'use client';
 
+import { FileText } from 'lucide-react';
+
 interface NotesFlagsSectionProps {
   notes: string;
   highRiskFlag: boolean;
@@ -11,7 +13,7 @@ export default function NotesFlagsSection({ notes, highRiskFlag, onUpdate }: Not
     <section className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
       <div className="px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50">
         <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-          <span className="material-symbols-outlined text-primary">description</span>
+          <FileText className="text-primary size-5" />
           Notes & Flags
         </h2>
       </div>

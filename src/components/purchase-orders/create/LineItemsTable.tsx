@@ -1,6 +1,7 @@
 'use client';
 
 import type { LineItem } from '../CreatePurchaseOrderPage';
+import { Pill, Syringe, PlusCircle, Trash2 } from 'lucide-react';
 
 interface LineItemsTableProps {
   lineItems: LineItem[];
@@ -10,8 +11,9 @@ interface LineItemsTableProps {
 }
 
 const getItemIcon = (index: number) => {
-  const icons = ['pill', 'vaccines', 'medication', 'syringe'];
-  return icons[index % icons.length];
+  const icons = [Pill, Syringe, Pill, Syringe];
+  const IconComponent = icons[index % icons.length];
+  return <IconComponent className="size-4.5 text-primary" />;
 };
 
 export default function LineItemsTable({
@@ -61,9 +63,7 @@ export default function LineItemsTable({
               <td className="p-3 align-middle">
                 <div className="flex items-center gap-3">
                   <div className="size-8 rounded bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary shrink-0">
-                    <span className="material-symbols-outlined text-[18px]">
-                      {getItemIcon(index)}
-                    </span>
+                    {getItemIcon(index)}
                   </div>
                   <input
                     className="w-full bg-transparent border-0 border-b border-transparent focus:border-primary focus:ring-0 p-0 text-sm font-medium text-slate-900 dark:text-white placeholder-slate-400"
@@ -116,7 +116,7 @@ export default function LineItemsTable({
                   className="text-slate-400 hover:text-red-500 transition-colors p-1 rounded hover:bg-red-50 dark:hover:bg-red-900/20"
                   onClick={() => onRemoveItem(item.id)}
                 >
-                  <span className="material-symbols-outlined text-[20px]">delete</span>
+                  <Trash2 className="size-5" />
                 </button>
               </td>
             </tr>
@@ -128,7 +128,7 @@ export default function LineItemsTable({
                 className="flex items-center gap-2 text-primary hover:text-blue-600 font-medium text-sm px-4 py-2 hover:bg-primary/5 rounded-lg w-full justify-start transition-colors border border-dashed border-primary/30 hover:border-primary"
                 onClick={onAddItem}
               >
-                <span className="material-symbols-outlined text-[20px]">add_circle</span>
+                <PlusCircle className="size-5" />
                 Add Medication Item
               </button>
             </td>

@@ -1,5 +1,7 @@
 'use client';
 
+import { History } from 'lucide-react';
+
 interface RecentActivitySectionProps {
   staffId: string;
 }
@@ -38,7 +40,7 @@ export default function RecentActivitySection({ staffId }: RecentActivitySection
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <div className="bg-orange-50 dark:bg-slate-700 p-2 rounded-lg text-orange-600 dark:text-orange-400">
-            <span className="material-symbols-outlined">history</span>
+            <History className="size-5" />
           </div>
           <h3 className="text-lg font-bold text-slate-900 dark:text-white">Recent Activity</h3>
         </div>

@@ -1,5 +1,7 @@
 'use client';
 
+import { AlertTriangle } from 'lucide-react';
+
 interface ShortageItem {
   id: string;
   medicineName: string;
@@ -41,7 +43,7 @@ export default function CriticalShortages() {
     <div className="bg-surface-light dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col overflow-hidden">
       <div className="p-5 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center bg-red-50/50 dark:bg-red-900/10">
         <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-red-600 dark:text-red-400">warning</span>
+          <AlertTriangle className="text-red-600 dark:text-red-400 size-5" />
           <h3 className="text-lg font-bold text-slate-900 dark:text-white">Critical Shortages</h3>
         </div>
         <button className="text-xs font-semibold text-red-600 dark:text-red-400 hover:text-red-700 uppercase tracking-wide">

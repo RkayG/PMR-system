@@ -1,5 +1,7 @@
 'use client';
 
+import { FileText } from 'lucide-react';
+
 interface AdditionalNotesSectionProps {
   notes: string;
   onUpdate: (field: string, value: string) => void;
@@ -12,7 +14,7 @@ export default function AdditionalNotesSection({
   return (
     <div className="p-6 md:p-8 bg-slate-50 dark:bg-slate-800/30">
       <h3 className="flex items-center gap-2 text-slate-900 dark:text-white text-lg font-bold leading-tight mb-6">
-        <span className="material-symbols-outlined text-primary">note_add</span>
+        <FileText className="text-primary size-5" />
         Additional Notes
       </h3>
       <label className="flex flex-col w-full">

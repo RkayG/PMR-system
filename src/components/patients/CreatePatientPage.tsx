@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Save } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import PersonalDetailsSection from './create/PersonalDetailsSection';
@@ -152,7 +153,7 @@ export default function CreatePatientPage() {
                 type="submit"
                 className="px-6 py-2.5 rounded-lg bg-primary text-white font-medium hover:bg-blue-600 shadow-lg shadow-blue-500/20 transition-all flex items-center gap-2"
               >
-                <span className="material-symbols-outlined text-[20px]">save</span>
+                <Save className="size-5" />
                 Save Patient Record
               </button>
             </div>

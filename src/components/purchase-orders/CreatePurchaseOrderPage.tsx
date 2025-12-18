@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { Save, Check } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import OrderDetailsSection from './create/OrderDetailsSection';
@@ -134,7 +135,7 @@ export default function CreatePurchaseOrderPage() {
               </div>
               <div className="flex gap-2">
                 <button className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-semibold text-slate-900 dark:text-white shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                  <span className="material-symbols-outlined text-[20px]">save</span>
+                  <Save className="size-5" />
                   Save Draft
                 </button>
               </div>
@@ -173,7 +174,7 @@ export default function CreatePurchaseOrderPage() {
               Cancel
             </button>
             <button className="px-6 py-2.5 rounded-lg bg-primary hover:bg-blue-600 text-white text-sm font-bold shadow-md shadow-primary/20 transition-all flex items-center gap-2">
-              <span className="material-symbols-outlined text-[20px]">check</span>
+              <Check className="size-5" />
               Submit Order
             </button>
           </div>

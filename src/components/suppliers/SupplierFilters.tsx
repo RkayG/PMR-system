@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Search, ChevronDown, SlidersHorizontal, List, Grid } from 'lucide-react';
 
 interface SupplierFiltersProps {
   viewMode: 'list' | 'grid';
@@ -15,9 +16,7 @@ export default function SupplierFilters({ viewMode, onViewModeChange }: Supplier
   return (
     <div className="bg-surface-light dark:bg-surface-dark p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row gap-4 items-center justify-between shadow-sm">
       <div className="relative w-full md:max-w-md">
-        <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400">
-          search
-        </span>
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400 size-5" />
         <input
           className="w-full pl-10 pr-4 py-2.5 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-white placeholder:text-slate-500"
           placeholder="Search by supplier name, account ID or postcode..."
@@ -58,7 +57,7 @@ export default function SupplierFilters({ viewMode, onViewModeChange }: Supplier
           </span>
         </div>
         <button className="p-2.5 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
-          <span className="material-symbols-outlined">tune</span>
+          <SlidersHorizontal className="size-5" />
         </button>
         <div className="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
         <div className="flex bg-background-light dark:bg-background-dark p-1 rounded-lg border border-slate-200 dark:border-slate-700">
@@ -71,7 +70,7 @@ export default function SupplierFilters({ viewMode, onViewModeChange }: Supplier
             title="List View"
             onClick={() => onViewModeChange('list')}
           >
-            <span className="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+            <List className="size-5" />
           </button>
           <button
             className={`p-1.5 rounded transition-colors ${
@@ -82,7 +81,7 @@ export default function SupplierFilters({ viewMode, onViewModeChange }: Supplier
             title="Grid View"
             onClick={() => onViewModeChange('grid')}
           >
-            <span className="material-symbols-outlined text-[20px]">grid_view</span>
+            <Grid className="size-5" />
           </button>
         </div>
       </div>

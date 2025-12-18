@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Pill, Plus, Search, Bell, Settings } from 'lucide-react';
 
 interface HeaderProps {
   showSearch?: boolean;
@@ -24,8 +25,8 @@ export default function Header({ showSearch = true }: HeaderProps) {
         <Link href="/" className="flex items-center gap-3 text-slate-900 dark:text-white hover:opacity-80 transition-opacity">
           <div className="size-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shadow-sm">
             <div className="relative flex items-center justify-center">
-              <span className="material-symbols-outlined text-primary text-2xl">medication_liquid</span>
-              <span className="absolute -top-0.5 -right-0.5 material-symbols-outlined text-primary text-sm font-bold">add</span>
+              <Pill className="text-primary size-6" />
+              <Plus className="absolute -top-0.5 -right-0.5 text-primary size-3" />
             </div>
           </div>
           <h1 className="text-lg font-bold leading-tight tracking-tight">Pharmacy PMR</h1>
@@ -36,7 +37,7 @@ export default function Header({ showSearch = true }: HeaderProps) {
           <div className="hidden md:flex flex-1 items-center max-w-md">
             <div className="relative w-full">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
-                <span className="material-symbols-outlined text-[20px]">search</span>
+                <Search className="size-5" />
               </div>
               <input
                 className="block w-full rounded-lg border-0 bg-slate-50 dark:bg-slate-800 py-2 pl-10 pr-4 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:ring-inset transition-shadow"
@@ -115,11 +116,11 @@ export default function Header({ showSearch = true }: HeaderProps) {
       {/* Action Icons */}
       <div className="flex items-center gap-3 border-l border-slate-200 dark:border-slate-700 pl-6 ml-6">
         <button className="flex items-center justify-center size-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors relative">
-          <span className="material-symbols-outlined text-[20px]">notifications</span>
+          <Bell className="size-5" />
           <span className="absolute top-2 right-2 size-2 bg-red-500 rounded-full border border-white dark:border-slate-850"></span>
         </button>
         <button className="flex items-center justify-center size-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
-          <span className="material-symbols-outlined text-[20px]">settings</span>
+          <Settings className="size-5" />
         </button>
         <button className="flex items-center justify-center size-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
           <div

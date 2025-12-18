@@ -1,5 +1,7 @@
 'use client';
 
+import { Ban } from 'lucide-react';
+
 interface AccountStatusCardProps {
   accountStatus: boolean;
   onStatusChange: (status: boolean) => void;
@@ -29,7 +31,7 @@ export default function AccountStatusCard({ accountStatus, onStatusChange }: Acc
       </div>
       <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
         <button className="w-full py-2.5 border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-lg text-sm font-bold hover:bg-red-100 dark:hover:bg-red-900/20 transition-colors flex items-center justify-center gap-2">
-          <span className="material-symbols-outlined text-[18px]">block</span>
+          <Ban className="size-4.5" />
           Deactivate Account
         </button>
       </div>

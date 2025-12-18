@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { Edit, ShoppingCart } from 'lucide-react';
 
 interface Supplier {
   id: string;
@@ -57,14 +58,14 @@ export default function SupplierHeader({ supplier }: SupplierHeaderProps) {
       </div>
       <div className="flex gap-3">
         <button className="inline-flex items-center justify-center gap-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-900 dark:text-white shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-          <span className="material-symbols-outlined text-[18px]">edit</span>
+          <Edit className="size-4.5" />
           Edit Details
         </button>
         <Link
           href={`/purchase-orders/new?supplier=${supplier.id}`}
           className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-600 transition-colors"
         >
-          <span className="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+          <ShoppingCart className="size-4.5" />
           Create Purchase Order
         </Link>
       </div>

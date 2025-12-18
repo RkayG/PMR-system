@@ -1,5 +1,7 @@
 'use client';
 
+import { User, Calendar } from 'lucide-react';
+
 interface PersonalDetailsSectionProps {
   title: string;
   firstName: string;
@@ -80,7 +82,7 @@ export default function PersonalDetailsSection({
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <span className="material-symbols-outlined text-slate-400 text-[20px]">calendar_today</span>
+              <Calendar className="text-slate-400 size-5" />
             </div>
             <input
               className="pl-10 w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"

@@ -1,5 +1,7 @@
 'use client';
 
+import { Badge } from 'lucide-react';
+
 interface RolePermissionsSectionProps {
   role: string;
   onRoleChange: (role: string) => void;
@@ -28,7 +30,7 @@ export default function RolePermissionsSection({ role, onRoleChange }: RolePermi
     <div className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-6 sm:p-8">
       <div className="flex items-center gap-3 mb-6">
         <div className="bg-purple-50 dark:bg-slate-700 p-2 rounded-lg text-purple-600 dark:text-purple-400">
-          <span className="material-symbols-outlined">badge</span>
+          <Badge className="size-5" />
         </div>
         <h3 className="text-lg font-bold text-slate-900 dark:text-white">Role & Permissions</h3>
       </div>

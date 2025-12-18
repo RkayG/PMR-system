@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Building2, Search, Plus, X } from 'lucide-react';
 import type { Allergy } from '../CreatePatientPage';
 
 interface ClinicalInfoSectionProps {
@@ -70,9 +71,7 @@ export default function ClinicalInfoSection({
             GP Practice / Prescriber
           </label>
           <div className="relative">
-            <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <span className="material-symbols-outlined text-slate-400 text-[20px]">search</span>
-            </span>
+            <Search className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 size-5" />
             <input
               className="pl-10 w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
               id="gp-search"
@@ -115,7 +114,7 @@ export default function ClinicalInfoSection({
                   type="button"
                   onClick={handleAddAllergy}
                 >
-                  <span className="material-symbols-outlined text-lg">add</span>
+                  <Plus className="size-4.5" />
                 </button>
               </div>
             </div>
@@ -142,7 +141,7 @@ export default function ClinicalInfoSection({
                     type="button"
                     onClick={() => onRemoveAllergy(allergy.id)}
                   >
-                    <span className="material-symbols-outlined text-[18px]">close</span>
+                    <X className="size-4.5" />
                   </button>
                 </div>
               ))}

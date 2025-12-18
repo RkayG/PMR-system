@@ -1,12 +1,14 @@
 'use client';
 
+import { MapPin } from 'lucide-react';
+
 export default function LocationsCard() {
   return (
     <div className="flex flex-col rounded-xl bg-surface-light dark:bg-surface-dark p-5 shadow-sm border border-slate-200 dark:border-slate-700">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="font-bold text-slate-900 dark:text-white">Locations</h3>
         <div className="rounded-full bg-purple-50 dark:bg-purple-900/20 p-2 text-purple-600 dark:text-purple-400">
-          <span className="material-symbols-outlined text-[20px]">location_on</span>
+          <MapPin className="size-5" />
         </div>
       </div>
       <div className="flex flex-1 flex-col gap-4">
