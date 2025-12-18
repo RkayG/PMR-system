@@ -17,3 +17,4 @@ export default function StockGridView({ items }: StockGridViewProps) {
   );
 }
 
+

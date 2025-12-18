@@ -82,30 +82,15 @@ export default function InventoryPage() {
   return (
     <div className="flex h-screen overflow-hidden bg-background-light dark:bg-background-dark">
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden bg-background-light dark:bg-background-dark">
-        {/* Top Header */}
-        <header className="bg-surface-light dark:bg-surface-dark border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex items-center justify-between shadow-sm z-10">
-          <div className="flex items-center gap-4">
-            <button className="md:hidden p-1 rounded-md text-slate-500 hover:bg-slate-100">
-              <span className="material-symbols-outlined">menu</span>
-            </button>
-            <div>
-              <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Inventory Overview</h2>
-              <p className="text-sm text-slate-500 dark:text-slate-400">Manage stock levels, batches, and expiry dates.</p>
-            </div>
+        <Header showSearch={true} />
+        
+        {/* Page Header */}
+        <div className="bg-surface-light dark:bg-surface-dark border-b border-slate-200 dark:border-slate-800 px-6 py-4">
+          <div>
+            <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Inventory Overview</h2>
+            <p className="text-sm text-slate-500 dark:text-slate-400">Manage stock levels, batches, and expiry dates.</p>
           </div>
-          <div className="flex items-center gap-3">
-            <button className="flex items-center justify-center size-10 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
-              <span className="material-symbols-outlined">notifications</span>
-              <span className="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-surface-dark"></span>
-            </button>
-            <button className="flex items-center justify-center size-10 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-              <span className="material-symbols-outlined">settings</span>
-            </button>
-            <button className="flex items-center justify-center size-10 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-              <span className="material-symbols-outlined">help</span>
-            </button>
-          </div>
-        </header>
+        </div>
         
         {/* Scrollable Content */}
         <div className="flex-1 overflow-auto p-6">
@@ -151,4 +136,5 @@ export default function InventoryPage() {
     </div>
   );
 }
+
 
