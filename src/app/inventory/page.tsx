@@ -4,3 +4,4 @@ export default function Inventory() {
   return <InventoryPage />;
 }
 
+
