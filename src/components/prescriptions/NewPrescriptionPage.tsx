@@ -64,7 +64,7 @@ export default function NewPrescriptionPage() {
   return (
     <div className="flex h-screen w-full overflow-hidden bg-background-light dark:bg-background-dark">
       <main className="flex-1 flex flex-col h-full overflow-hidden relative">
-        <Header title="Prescription Entry" showSearch={false} />
+        <Header showSearch={false} />
         
         {/* Scrollable Content */}
         <div className="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark p-6">
