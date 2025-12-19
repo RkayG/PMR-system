@@ -1,4 +1,6 @@
-export default function KPICards() {
+import { AlertTriangle, ArrowRight, Clock, PoundSterling, TrendingUp } from "lucide-react";
+
+  export default function KPICards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {/* Alert Card 1 - Low Stock */}
@@ -9,12 +11,12 @@ export default function KPICards() {
             <h3 className="text-3xl font-bold text-slate-900 dark:text-white">12</h3>
           </div>
           <div className="p-2 bg-red-50 dark:bg-red-900/20 rounded-lg text-red-600 dark:text-red-400">
-            <span className="material-symbols-outlined icon-fill">warning</span>
+            <AlertTriangle className="size-5" />
           </div>
         </div>
         <div className="mt-4 flex items-center gap-1 text-xs font-medium text-red-600 dark:text-red-400">
           <span>Action Required</span>
-          <span className="material-symbols-outlined text-sm">arrow_forward</span>
+          <ArrowRight className="size-5" />
         </div>
       </div>
 
@@ -26,12 +28,12 @@ export default function KPICards() {
             <h3 className="text-3xl font-bold text-slate-900 dark:text-white">4</h3>
           </div>
           <div className="p-2 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-amber-600 dark:text-amber-400">
-            <span className="material-symbols-outlined icon-fill">history_toggle_off</span>
+            <Clock className="size-5" />
           </div>
         </div>
         <div className="mt-4 flex items-center gap-1 text-xs font-medium text-amber-600 dark:text-amber-400">
           <span>Review Batches</span>
-          <span className="material-symbols-outlined text-sm">arrow_forward</span>
+          <ArrowRight className="size-5" />
         </div>
       </div>
 
@@ -43,11 +45,11 @@ export default function KPICards() {
             <h3 className="text-3xl font-bold text-slate-900 dark:text-white">£42,390.00</h3>
           </div>
           <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-blue-600 dark:text-blue-400">
-            <span className="material-symbols-outlined icon-fill">attach_money</span>
+            <PoundSterling className="size-5" />
           </div>
         </div>
         <div className="mt-4 flex items-center gap-1 text-xs font-medium text-green-600 dark:text-green-400">
-          <span className="material-symbols-outlined text-sm">trending_up</span>
+          <TrendingUp className="size-5" />
           <span>+2.4% vs last month</span>
         </div>
       </div>

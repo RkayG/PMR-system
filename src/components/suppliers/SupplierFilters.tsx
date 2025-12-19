@@ -37,9 +37,7 @@ export default function SupplierFilters({ viewMode, onViewModeChange }: Supplier
             <option>On Hold</option>
             <option>Inactive</option>
           </select>
-          <span className="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none text-lg">
-            expand_more
-          </span>
+          <ChevronDown className="size-5 absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none text-lg" />
         </div>
         <div className="relative min-w-[160px]">
           <select
@@ -52,9 +50,8 @@ export default function SupplierFilters({ viewMode, onViewModeChange }: Supplier
             <option>Net 60 Days</option>
             <option>COD</option>
           </select>
-          <span className="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none text-lg">
-            expand_more
-          </span>
+          <ChevronDown className="size-5 absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none text-lg" />
+           
         </div>
         <button className="p-2.5 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
           <SlidersHorizontal className="size-5" />

@@ -1,5 +1,7 @@
 'use client';
 
+import { ChevronDown, EllipsisVertical } from 'lucide-react';
+
 interface StockItem {
   id: string;
   medicineName: string;
@@ -95,9 +97,7 @@ export default function StockTableRow({
       >
         <td className="px-6 py-4 whitespace-nowrap">
           {item.hasMultipleBatches ? (
-            <span className="material-symbols-outlined text-slate-400 text-sm transform rotate-90">
-              expand_more
-            </span>
+              <ChevronDown className="size-5 text-slate-400" />
           ) : (
             <input
               className="rounded border-slate-300 text-primary focus:ring-primary size-4"
@@ -111,7 +111,7 @@ export default function StockTableRow({
         <td className="px-6 py-4">
           <div className="flex items-center">
             <div className={`flex-shrink-0 size-8 ${getIconColor()} rounded-lg flex items-center justify-center text-slate-500`}>
-              <span className={`material-symbols-outlined text-lg ${item.category.includes('Brand') ? 'text-purple-600' : ''}`}>
+              <span className={`text-lg ${item.category.includes('Brand') ? 'text-purple-600' : ''}`}>
                 {getIcon()}
               </span>
             </div>
@@ -151,7 +151,7 @@ export default function StockTableRow({
         <td className="px-6 py-4 whitespace-nowrap">{getStatusBadge()}</td>
         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
           <button className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
-            <span className="material-symbols-outlined">more_vert</span>
+            <EllipsisVertical className="size-5" />
           </button>
         </td>
       </tr>

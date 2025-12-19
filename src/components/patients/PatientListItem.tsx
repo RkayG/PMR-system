@@ -1,5 +1,7 @@
 'use client';
 
+import { ChevronRight } from 'lucide-react';
+
 interface Patient {
   id: string;
   name: string;
@@ -54,7 +56,7 @@ export default function PatientListItem({ patient, isSelected, onClick }: Patien
       </div>
       {isSelected && (
         <div className="shrink-0 self-center">
-          <span className="material-symbols-outlined text-primary text-[20px]">chevron_right</span>
+          <ChevronRight className="size-5 text-primary" />
         </div>
       )}
     </div>

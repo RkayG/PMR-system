@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PatientListItem from './PatientListItem';
+import { Search } from 'lucide-react';
 
 interface Patient {
   id: string;
@@ -63,7 +64,7 @@ export default function PatientSearchPanel({ selectedPatientId, onSelectPatient 
         <label className="flex flex-col w-full">
           <div className="flex w-full items-stretch rounded-lg h-10 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
             <div className="flex items-center justify-center pl-3 text-slate-400">
-              <span className="material-symbols-outlined text-[20px]">search</span>
+              <Search className="size-5" />
             </div>
             <input
               className="flex-1 bg-transparent border-none text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-0 px-3"

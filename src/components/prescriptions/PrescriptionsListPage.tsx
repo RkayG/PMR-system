@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import FilterToolbar from './list/FilterToolbar';
 import PrescriptionTable from './list/PrescriptionTable';
+import { Plus } from 'lucide-react';
 
 export default function PrescriptionsListPage() {
   return (
@@ -21,12 +22,7 @@ export default function PrescriptionsListPage() {
             ]}
           />
         </div>
-        <div className="flex items-center gap-3 ml-auto">
-          <button className="p-2 text-slate-500 dark:text-gray-400 hover:text-primary hover:bg-primary/10 rounded-full transition-colors relative">
-            <span className="material-symbols-outlined">notifications</span>
-            <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-white dark:border-background-dark"></span>
-          </button>
-        </div>
+      
       </header>
 
       {/* Scrollable Content */}
@@ -46,7 +42,7 @@ export default function PrescriptionsListPage() {
               href="/prescriptions/new"
               className="flex items-center justify-center gap-2 bg-primary hover:bg-blue-600 text-white px-5 py-2.5 rounded-lg shadow-sm shadow-blue-500/30 transition-all active:scale-95 font-medium text-sm"
             >
-              <span className="material-symbols-outlined text-[20px]">add</span>
+              <Plus className="size-5" />
               New Prescription
             </Link>
           </div>

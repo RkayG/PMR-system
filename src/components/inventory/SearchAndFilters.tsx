@@ -1,5 +1,8 @@
 'use client';
 
+import { Box, List, ScanBarcode, Search, ChevronDown, Pencil, Grid } from "lucide-react";
+
+
 interface SearchAndFiltersProps {
   viewMode: 'list' | 'grid';
   onViewModeChange: (mode: 'list' | 'grid') => void;
@@ -11,7 +14,7 @@ export default function SearchAndFilters({ viewMode, onViewModeChange }: SearchA
       {/* Search */}
       <div className="relative w-full lg:w-96 group">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <span className="material-symbols-outlined text-slate-400 group-focus-within:text-primary">search</span>
+          <Search className="size-5 text-slate-400 group-focus-within:text-primary" />
         </div>
         <input
           className="block w-full pl-10 pr-10 py-2.5 border border-slate-300 dark:border-slate-600 rounded-lg leading-5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm transition-shadow"
@@ -19,7 +22,7 @@ export default function SearchAndFilters({ viewMode, onViewModeChange }: SearchA
           type="text"
         />
         <div className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer">
-          <span className="material-symbols-outlined text-slate-400 hover:text-slate-600" title="Scan Barcode">qr_code_scanner</span>
+          <ScanBarcode className="size-5 text-slate-400 hover:text-slate-600" />
         </div>
       </div>
 
@@ -36,7 +39,7 @@ export default function SearchAndFilters({ viewMode, onViewModeChange }: SearchA
             title="List View"
             onClick={() => onViewModeChange('list')}
           >
-            <span className="material-symbols-outlined text-[20px]">view_list</span>
+            <List className="size-5" />
           </button>
           <button
             className={`p-1.5 rounded transition-colors ${
@@ -47,7 +50,7 @@ export default function SearchAndFilters({ viewMode, onViewModeChange }: SearchA
             title="Grid View"
             onClick={() => onViewModeChange('grid')}
           >
-            <span className="material-symbols-outlined text-[20px]">grid_view</span>
+            <Grid className="size-5" />
           </button>
         </div>
 
@@ -61,17 +64,17 @@ export default function SearchAndFilters({ viewMode, onViewModeChange }: SearchA
             <option>Brands</option>
           </select>
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
-            <span className="material-symbols-outlined text-sm">expand_more</span>
+            <ChevronDown className="size-5" />
           </div>
         </div>
 
         <button className="flex items-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-sm font-medium transition-colors">
-          <span className="material-symbols-outlined text-lg">tune</span>
+          <Pencil className="size-5" />
           <span>Adjust Stock</span>
         </button>
 
         <button className="flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-blue-600 text-white rounded-lg text-sm font-bold shadow-md shadow-blue-500/20 transition-all active:scale-95 ml-auto lg:ml-0">
-          <span className="material-symbols-outlined text-lg">add_box</span>
+          <Box className="size-5" />
           <span>Receive Stock</span>
         </button>
       </div>

@@ -1,5 +1,7 @@
 'use client';
 
+import { Building2, Home, Phone } from 'lucide-react';
+
 interface PatientInfoGridProps {
   patientId: string;
 }
@@ -29,7 +31,7 @@ export default function PatientInfoGrid({ patientId }: PatientInfoGridProps) {
       {/* Address */}
       <div className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
         <div className="flex items-center gap-2 mb-3 text-slate-500 dark:text-slate-400">
-          <span className="material-symbols-outlined text-[20px]">home</span>
+          <Home className="size-5" />
           <span className="text-xs font-semibold uppercase tracking-wider">Address</span>
         </div>
         <p className="text-slate-900 dark:text-white text-sm font-medium leading-relaxed">
@@ -43,7 +45,7 @@ export default function PatientInfoGrid({ patientId }: PatientInfoGridProps) {
       {/* Contact */}
       <div className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
         <div className="flex items-center gap-2 mb-3 text-slate-500 dark:text-slate-400">
-          <span className="material-symbols-outlined text-[20px]">call</span>
+          <Phone className="size-5" />
           <span className="text-xs font-semibold uppercase tracking-wider">Contact</span>
         </div>
         <div className="space-y-3">
@@ -66,7 +68,7 @@ export default function PatientInfoGrid({ patientId }: PatientInfoGridProps) {
       {/* GP Details */}
       <div className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
         <div className="flex items-center gap-2 mb-3 text-slate-500 dark:text-slate-400">
-          <span className="material-symbols-outlined text-[20px]">medical_services</span>
+          <Building2 className="size-5" />
           <span className="text-xs font-semibold uppercase tracking-wider">GP Practice</span>
         </div>
         <p className="text-slate-900 dark:text-white text-sm font-medium">{patientInfo.gp.name}</p>

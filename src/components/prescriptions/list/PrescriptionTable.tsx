@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { EllipsisVertical } from 'lucide-react';
 
 interface Prescription {
   id: string;
@@ -276,7 +277,7 @@ export default function PrescriptionTable() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right">
                   <button className="p-1.5 rounded-md text-slate-500 hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                    <span className="material-symbols-outlined text-[20px]">more_vert</span>
+                    <EllipsisVertical className="size-5" />
                   </button>
                 </td>
               </tr>

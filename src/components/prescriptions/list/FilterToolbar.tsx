@@ -1,5 +1,6 @@
 'use client';
 
+import { ChevronDown, Download, Search } from 'lucide-react';
 import { useState } from 'react';
 
 export default function FilterToolbar() {
@@ -14,9 +15,7 @@ export default function FilterToolbar() {
       <div className="flex-1 min-w-[300px]">
         <div className="relative group">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <span className="material-symbols-outlined text-gray-400 group-focus-within:text-primary transition-colors">
-              search
-            </span>
+            <Search className="size-5 text-gray-400 group-focus-within:text-primary transition-colors" />
           </div>
           <input
             className="block w-full pl-10 pr-3 py-2.5 border-none rounded-lg bg-background-light dark:bg-background-dark text-slate-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50 text-sm font-normal transition-shadow"
@@ -42,7 +41,7 @@ export default function FilterToolbar() {
           <button className="flex items-center gap-2 px-3 py-2 rounded-lg bg-background-light dark:bg-background-dark hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-900 dark:text-gray-200 text-sm font-medium transition-colors border border-transparent hover:border-gray-200 dark:hover:border-gray-700">
             <span className="text-slate-500 dark:text-gray-500">Status:</span>
             <span>{statusFilter}</span>
-            <span className="material-symbols-outlined text-[18px] text-gray-400">expand_more</span>
+            <ChevronDown className="size-5 text-gray-400" />
           </button>
         </div>
 
@@ -51,7 +50,7 @@ export default function FilterToolbar() {
           <button className="flex items-center gap-2 px-3 py-2 rounded-lg bg-background-light dark:bg-background-dark hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-900 dark:text-gray-200 text-sm font-medium transition-colors border border-transparent hover:border-gray-200 dark:hover:border-gray-700">
             <span className="text-slate-500 dark:text-gray-500">Date:</span>
             <span>{dateFilter}</span>
-            <span className="material-symbols-outlined text-[18px] text-gray-400">expand_more</span>
+            <ChevronDown className="size-5 text-gray-400" />
           </button>
         </div>
 
@@ -60,7 +59,7 @@ export default function FilterToolbar() {
           <button className="flex items-center gap-2 px-3 py-2 rounded-lg bg-background-light dark:bg-background-dark hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-900 dark:text-gray-200 text-sm font-medium transition-colors border border-transparent hover:border-gray-200 dark:hover:border-gray-700">
             <span className="text-slate-500 dark:text-gray-500">Prescriber:</span>
             <span>{prescriberFilter}</span>
-            <span className="material-symbols-outlined text-[18px] text-gray-400">expand_more</span>
+            <ChevronDown className="size-5 text-gray-400" />
           </button>
         </div>
 
@@ -69,7 +68,7 @@ export default function FilterToolbar() {
           className="flex items-center justify-center p-2 rounded-lg text-slate-500 hover:text-primary hover:bg-primary/10 transition-colors ml-1"
           title="Export List"
         >
-          <span className="material-symbols-outlined text-[20px]">download</span>
+          <Download className="size-5" />
         </button>
       </div>
     </div>

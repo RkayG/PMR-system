@@ -1,5 +1,7 @@
 'use client';
 
+import { Edit, EyeOff } from 'lucide-react';
+
 interface PatientProfileHeaderProps {
   patientId: string;
 }
@@ -44,10 +46,10 @@ export default function PatientProfileHeader({ patientId }: PatientProfileHeader
       </div>
       <div className="flex gap-2">
         <button className="flex items-center justify-center rounded-full size-10 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 text-slate-500 hover:text-primary hover:border-primary transition-colors">
-          <span className="material-symbols-outlined">edit</span>
+          <Edit className="size-5" />
         </button>
         <button className="flex items-center justify-center rounded-full size-10 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 text-slate-500 hover:text-primary hover:border-primary transition-colors">
-          <span className="material-symbols-outlined">visibility_off</span>
+          <EyeOff className="size-5" />
         </button>
       </div>
     </div>

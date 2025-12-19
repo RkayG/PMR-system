@@ -1,6 +1,9 @@
 'use client';
 
 import type { StockItem } from './StockTable';
+import { MoreVertical } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 interface StockCardProps {
   item: StockItem;
@@ -33,14 +36,14 @@ export default function StockCard({ item }: StockCardProps) {
       case 'low':
         return (
           <div className="bg-red-50 dark:bg-red-900/20 px-5 py-2.5 border-t border-red-100 dark:border-red-900/30 flex items-center gap-2">
-            <span className="material-symbols-outlined text-red-600 dark:text-red-400 text-sm">warning</span>
+            <AlertTriangle className="size-5 text-red-600 dark:text-red-400" />
             <span className="text-xs font-bold text-red-700 dark:text-red-300 uppercase tracking-wide">Low Stock</span>
           </div>
         );
       case 'expiring':
         return (
           <div className="bg-amber-50 dark:bg-amber-900/20 px-5 py-2.5 border-t border-amber-100 dark:border-amber-900/30 flex items-center gap-2">
-            <span className="material-symbols-outlined text-amber-600 dark:text-amber-400 text-sm">history_toggle_off</span>
+            <Clock className="size-5 text-amber-600 dark:text-amber-400" />
             <span className="text-xs font-bold text-amber-700 dark:text-amber-300 uppercase tracking-wide">Expiring Soon</span>
           </div>
         );
@@ -81,7 +84,7 @@ export default function StockCard({ item }: StockCardProps) {
         <div className="flex justify-between items-start mb-4">
           <div className="flex items-center gap-3">
             <div className={`size-10 rounded-lg ${getIconColor()} flex items-center justify-center flex-shrink-0`}>
-              <span className={`material-symbols-outlined ${item.category.includes('Brand') ? 'text-purple-600' : ''}`}>
+              <span className={`${item.category.includes('Brand') ? 'text-purple-600' : ''}`}>
                 {getIcon()}
               </span>
             </div>
@@ -91,7 +94,7 @@ export default function StockCard({ item }: StockCardProps) {
             </div>
           </div>
           <button className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
-            <span className="material-symbols-outlined">more_vert</span>
+            <MoreVertical className="size-5" />
           </button>
         </div>
 
